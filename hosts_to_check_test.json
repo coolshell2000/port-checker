@@ -1,0 +1,24 @@
+[
+  {
+    "name": "google",
+    "tags": ["google", "test", "ok"],
+    "address": "www.google.com",
+    "ports": [
+      80
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "google_wrong_port",
+    "tags": ["google", "test", "wrong port"],
+    "address": "www.google.com",
+    "ports": [
+      85
+    ],
+    "timeout": 1
+  }
+
+
+
+]

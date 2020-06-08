@@ -1,0 +1,18 @@
+{% extends "email-html_base.tmpl" %}
+
+{% block content %}
+    <p>
+        {{ msg }}
+    </p>
+
+    <table class='noborder'>
+      <tr>
+	<th>c1</th><th>c2</th><th>c3</th>
+      </tr>
+      {% for instance in instances -%}
+        <tr>
+          <td>{{ instance.id }}</td><td>{{ instance.accessIPv4 }}</td><td>{{ instance.name }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+{% endblock %}

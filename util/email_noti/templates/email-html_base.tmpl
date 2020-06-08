@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GG notification</title>
+    <style type="text/css">
+      span.bold {font-weight: bold;}
+      table.noborder {border: 0px; padding: 8px;}
+      th {text-align: left;}
+    </style>
+  </head>
+  <body>
+    <p>
+      Dear {{ dear }},
+    </p>
+
+{% block content %}
+{% endblock %}
+
+    <p>
+      Regards, <br />
+      {{ name_from }}
+      <br />
+    </p>
+    <p>
+      -- <br />
+      sent by agent {{ agent }}
+    </p>
+  </body>
+</html>
