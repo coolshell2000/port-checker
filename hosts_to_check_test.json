@@ -14,7 +14,7 @@
     "tags": ["google", "test", "wrong port"],
     "address": "www.google.com",
     "ports": [
-      85
+      80, 90
     ],
     "timeout": 1
   }
