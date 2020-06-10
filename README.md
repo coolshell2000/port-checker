@@ -19,8 +19,4 @@ python portchecker.py -h
 
 ## todo
 
-[x] return json
-
-[x] integrate to rest_api as a restful service endpoint
-
-[x] validate rest input -  https://www.cameronmacleod.com/blog/better-validation-flask-marshmallow
+moved
