@@ -205,8 +205,6 @@ def main(argv):
     log_file = argv[0] + '.log'
     logger_rota = create_rotating_log(log_file)
     logger_rota.debug("start...")
-    # use soton email to send
-    # e = EmailNotification("smtp.soton.ac.uk", "bt", "bt@soton.ac.uk") # default port is 25 for soton outlook without using gmail.
     
     # create an instance of ConfigParser class.
     parser = ConfigParser()
@@ -229,8 +227,8 @@ def main(argv):
     
     agent_str = getpass.getuser() + '@' + socket.gethostname()
 
-    list_email_to = ["bt2000@gmail.com", "bt2000a@gmail.com"]
-    list_name_to = ["unknown", "bt at gmail"]
+    list_email_to = ["ggs.alfa.2015@gmail.com"]  # can be multiple in a list
+    list_name_to = ["unknown"]
     
     tasks_list2 = []
     for i in range(0, len(list_email_to)):

@@ -39,7 +39,7 @@ parser.add_argument('-payload', type=str, nargs=1, default=['hosts_to_check_test
 parser.add_argument('-filter', type=str, nargs=1, default=[''],
                     help='filter_case_insensitive, will be applied to brief str constructed from the server json')
 
-parser.add_argument('-notify_email', type=str, nargs=1, default=["bt2000@gmail.com"],
+parser.add_argument('-notify_email', type=str, nargs=1, default=["ggs.alfa.2015@gmail.com"],
                     help='notify by email given if any port of any server failed test. '
                          'todo: can also use email specified in payload json, for per server/port notify')
 
