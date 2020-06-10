@@ -70,7 +70,7 @@ class ProbeHost:
                     result_ru = tn.read_until(tn_expect_str_as_bytes,
                                               timeout=self.d_target_host_combined["payload"]["timeout"]).decode("utf-8")
                     if len(result_ru) < 1:
-                        result_ru = "empty"
+                        result_ru = "empty is also all-right"
                     self.d_target_host_combined["result"][str(port)] = result_ru
                     tn.close()  # can skip this as using the with clause will ensure close when block done.
                     if self.verbose > 0:

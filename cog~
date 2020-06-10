@@ -1,0 +1,257 @@
+[
+  {
+    "name": "d7",
+    "address": "81.96.148.92",
+    "ports": [
+      443,
+      99,
+      33,
+      33549
+    ],
+    "timeout": 2
+  },
+  {
+    "name": "manny2_petrel_network_license",
+    "tags": ["gg", "lab2", "win10", "license"],
+    "address": "139.166.230.114",
+    "ports": [
+      49329,
+      62755
+    ],
+    "timeout": 1
+  },
+  {
+    "name": "licblade_promax_network_perpetual_license",
+    "tags": ["gg", "itg", "blade", "vm", "license"],
+    "address": "139.166.240.215",
+    "ports": [
+      2013
+    ],
+    "timeout": 1
+  },
+  {
+    "name": "noc-licserv3_promax_network_perpetual_license",
+    "tags": ["gg", "itg", "blade", "license"],
+    "hostname": "noc-licserv3.noc.soton.ac.uk",
+    "address": "139.166.240.45",
+    "ports": [
+      2013
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "manny2_RDP",
+    "tags": ["gg", "lab2", "win10", "license"],
+    "address": "139.166.230.114",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+  {
+    "name": "manny1_RDP",
+    "tags": ["gg", "lab2", "win10", "license"],
+    "address": "139.166.230.91",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "ZURG_RDP",
+    "tags": ["gg", "lab1", "win10", "fxip"],
+    "address": "139.166.250.228",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "BULLSEYE_RDP",
+    "tags": ["gg", "lab1", "win10", "fxip"],
+    "address": "139.166.250.78",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+
+  {
+    "name": "NOCS03867P_RDP",
+    "tags": ["gg", "lab1", "win10", "dhcp"],
+    "address": "139.166.156.77",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+    {
+    "name": "NOCS03868Q_RDP",
+    "tags": ["gg", "lab1", "win10", "dhcp"],
+    "address": "139.166.156.47",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "SNAKE_RDP",
+    "tags": ["gg", "lab1", "win10", "dhcp"],
+    "address": "139.166.156.75",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+    {
+    "name": "DPT1600_RDP",
+    "tags": ["gg", "lab1", "win10", "dhcp"],
+    "address": "139.166.156.45",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "TUCK_RDP",
+    "tags": ["gg", "lab1", "win10", "dhcp"],
+    "address": "139.166.156.76",
+    "ports": [
+      3389
+    ],
+    "timeout": 1
+  },
+
+
+
+
+  {
+    "name": "cog",
+    "tags": ["gg", "private", "utility"],
+    "address": "139.166.230.62",
+    "ports": [
+      22
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "sarge",
+    "tags": ["gg", "private", "linux", "utility", "tape", "ggsf-dash"],
+    "address": "139.166.250.226",
+    "ports": [
+      22,
+      5001
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "crush",
+    "tags": ["gg", "private", "nas", "wiki"],
+    "address": "139.166.230.119",
+    "ports": [
+      22,
+      80,
+      5000
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "atta",
+    "tags": ["gg", "itg", "linux", "lab1", "processing"],
+    "address": "139.166.250.233",
+    "ports": [
+      22
+    ],
+    "timeout": 1
+  },
+
+  {
+    "name": "buzz",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "setup"],
+      "address": "139.166.250.231",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+
+  {
+    "name": "hopper",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "setup"],
+      "address": "139.166.250.227",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+  {
+    "name": "hamm",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "setup"],
+      "address": "139.166.250.238",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+
+  {
+    "name": "molt",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "setup"],
+      "address": "139.166.250.237",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+  {
+    "name": "randall",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "setup"],
+      "address": "139.166.250.52",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+
+  {
+    "name": "flik",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "module"],
+      "address": "139.166.250.232",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+  {
+    "name": "wheezy",
+    "tags": ["gg", "itg", "linux", "blade", "processing", "module"],
+      "address": "139.166.250.117",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+
+  {
+    "name": "woody",
+    "tags": ["gg", "itg", "linux", "lab2", "processing", "module"],
+      "address": "139.166.250.234",
+    "ports": [
+      22],
+    "timeout": 1
+  },
+
+  {
+    "name": "jessie",
+    "tags": ["gg", "itg", "linux", "lab1", "processing", "module"],
+      "address": "139.166.250.236",
+    "ports": [
+      22],
+    "timeout": 1
+  }
+
+]

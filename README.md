@@ -3,12 +3,20 @@
 
 **return:** a json resulting list, each combines payload and result
 
-**usage:** structure: portchecker.py --> probe_ip_port.py
+**usage:** structure: portchecker.py --> probe_ip_port.py(as a class)
 
+** (no ve needed if emailing/templates is not used) **
+otherwise: 
+```
+python3 -m venv ./ve_portchecker
+source ve_portchecker/bin/activate
+pip install -r r.txt
+python portchecker.py -h
+```
 ## todo
 
 [x] return json
 
 [x] integrate to rest_api as a restful service endpoint
 
-[x]
+[x] validate rest input -  https://www.cameronmacleod.com/blog/better-validation-flask-marshmallow
