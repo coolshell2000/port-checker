@@ -15,7 +15,7 @@ python portchecker.py -h
 ```
 
 
-![](.{dcocument_name}_images/8db18455.png)
+![](img/8db18455.png)
 
 ## todo
 
