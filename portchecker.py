@@ -21,7 +21,8 @@ def create_rotating_log(path):
     handler = RotatingFileHandler(path, maxBytes=20000,
                                   backupCount=3)
     # create formatter
-    formatter = logging.Formatter('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s')
+    formatter = logging.Formatter\
+        ('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s', "%Y-%m-%dT%H:%M:%S")
     handler.setFormatter(formatter)
     
     logger.addHandler(handler)
