@@ -54,7 +54,7 @@ parser.add_argument('-rest_url', type=str, nargs=1, default=[""],
 args = parser.parse_args()
 
 # create a rotation log
-log_file = "private.md/log/"+os.path.basename(sys.argv[0]) + '.log'
+log_file = "private.ed/log/"+os.path.basename(sys.argv[0]) + '.log'
 logger_rota = create_rotating_log(log_file)
 logger_rota.debug("start...")
 
