@@ -75,40 +75,46 @@ email_notifier = EmailNotification(smtp="smtp.gmail.com", login="ggs.alfa.2015",
 
 
 path_hosts_json_file = args.payload[0]
-print("reading in targeting hosts/payloads from {}".format(path_hosts_json_file))
+logger_rota.info("reading in targeting hosts/payloads from {}".format(path_hosts_json_file))
 with open(path_hosts_json_file, "r") as read_file:
     list_targets = json.load(read_file)
 
-print("filtering out unwanted targets.. by filter:{}".format(filter))
+logger_rota.info("filtering out unwanted targets.. by filter:{}".format(filter))
 list_targets_filtered = []
 for d_target in list_targets:
     if args.filter[0].lower() in str(d_target.values()).lower():
         list_targets_filtered.append(d_target)
 
-print("{} filtered targets. starting ...".format(len(list_targets_filtered)))
+logger_rota.info("{} filtered targets. starting ...".format(len(list_targets_filtered)))
 
 #
 # with open('hosts_to_check_from_d7.json', 'w') as fp:
 #     json.dump(targets, fp)  ################## dump for dict, dumps for list of dicts,
 
 counter = 0
+counter_ok = 0
+d_errors = {} # key is target_brief_str, value is d_result_combined
 for d_target_host in list_targets_filtered:
     
     prober = ProbeHost(d_target_host_payload=d_target_host, verbose=args.verbose[0])
     target_brief_str = prober.d_target_host_combined["result"]["target_brief_str"]
     
-    print("\n{}. {}".format(counter, target_brief_str))
+    logger_rota.info("\n{}. {}".format(counter, target_brief_str))
     
     #### payload ####
     d_result_combined = prober.probe_via_telnet()
     #################
     
     if None in d_result_combined["result"].values():
-        print("error\t{}".format(target_brief_str))
-        pprint.pprint(d_result_combined)
-        email_notifier.send_email(args.notify_email[0], subject=target_brief_str, msg=str(d_result_combined))
+        logger_rota.error("error\t{}".format(target_brief_str))
+        logger_rota.error(d_result_combined)
+        logger_rota.error("to send email when loop finishes")
+        d_errors[target_brief_str] = d_result_combined
+        # list_target_brief_str.append(target_brief_str)
+        # list_d_result_combined.append(d_result_combined)
     else:
-        print("okay")
+        logger_rota.info("okay")
+        counter_ok = counter_ok + 1
     
     if args.verbose[0] > 1:
         print("\njson - d_result_combined:")
@@ -116,3 +122,9 @@ for d_target_host in list_targets_filtered:
         pprint.pprint(json_str)
     
     counter = counter + 1
+
+if counter > 0:
+    logger_rota.info("{:.2f}% okay on {} of {} nodes filtered by {}"
+                     .format(counter_ok/counter*100, counter_ok, counter, str(args.filter)))
+    if counter_ok < counter:
+        email_notifier.send_email(args.notify_email[0], subject=str(args.filter), msg=str(d_errors))
