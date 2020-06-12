@@ -80,7 +80,7 @@ logger_rota.info("reading in targeting hosts/payloads from {}".format(path_hosts
 with open(path_hosts_json_file, "r") as read_file:
     list_targets = json.load(read_file)
 
-logger_rota.info("filtering out unwanted targets.. by filter:{}".format(filter))
+logger_rota.info("filtering out unwanted targets.. by filter:{}".format(str(filter)))
 list_targets_filtered = []
 for d_target in list_targets:
     if args.filter[0].lower() in str(d_target.values()).lower():
