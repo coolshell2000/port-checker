@@ -22,7 +22,7 @@ def create_rotating_log(path):
                                   backupCount=3)
     # create formatter
     formatter = logging.Formatter\
-        ('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s', "%Y-%m-%dT%H:%M:%S")
+        ('[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s', "%Y-%m-%d_a_%H:%M:%S")
     handler.setFormatter(formatter)
     
     logger.addHandler(handler)
