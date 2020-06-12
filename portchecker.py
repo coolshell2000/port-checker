@@ -54,7 +54,7 @@ parser.add_argument('-rest_url', type=str, nargs=1, default=[""],
 args = parser.parse_args()
 
 # create a rotation log
-log_file = sys.argv[0] + '.log'
+log_file = "private.md/log/"+sys.argv[0] + '.log'
 logger_rota = create_rotating_log(log_file)
 logger_rota.debug("start...")
 
@@ -63,8 +63,8 @@ parser = ConfigParser()
 parser.read('/home/bt/ggs.ini')
 imap_passwd_ggs_alfa_2015 = parser.get('gdata', 'IMAP_PASSWD_ggs_alfa_2015')
 
-name_from = "ggs.alfa.2015"
-email_from = "ggs.alfa.2015@gmail.com"
+# name_from = "ggs.alfa.2015"
+# email_from = "ggs.alfa.2015@gmail.com"
 
 # need to enable less secure in gmail settings, otherwise auth error
 email_notifier = EmailNotification(smtp="smtp.gmail.com", login="ggs.alfa.2015",
